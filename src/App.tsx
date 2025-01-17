@@ -10,6 +10,7 @@ import { Organizations } from "./pages/Organizations";
 import { Projects } from "./pages/Projects";
 import { Register } from "./pages/register";
 import { ThankYou } from "./pages/register/await";
+import { Registration } from "./pages/self-register";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
 
           <Route path="/register" element={<Register />} />
+          <Route path="/self-register" element={<Registration />} />
           <Route path="/obrigado" element={<ThankYou />} />
 
           <Route

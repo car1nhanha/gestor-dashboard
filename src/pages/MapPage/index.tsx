@@ -15,29 +15,9 @@ export function MapPage() {
       .then((response) => {
         console.log(response.volunteers);
         setMembers(response.volunteers);
-        // setOrganizations(response.organizations);
       })
       .finally(() => setLoading(false));
   }, []);
-
-  // useEffect(() => {
-  //   async function loadData() {
-  //     const [membersResponse, orgsResponse] = await Promise.all([
-  //       supabase.from('members').select('*'),
-  //       supabase.from('organizations').select('*')
-  //     ]);
-
-  //     if (!membersResponse.error && membersResponse.data) {
-  //       setMembers(membersResponse.data);
-  //     }
-  //     if (!orgsResponse.error && orgsResponse.data) {
-  //       setOrganizations(orgsResponse.data);
-  //     }
-  //     setLoading(false);
-  //   }
-
-  //   loadData();
-  // }, []);
 
   if (loading) {
     return <div className="text-center">Carregando...</div>;
